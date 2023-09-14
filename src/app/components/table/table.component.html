@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Número</th>
+      <th>Nombre</th>
+      <th>Rol</th>
+      <th>Sueldo Base</th>
+      <th>Envios</th>
+      <th class="actions">Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.numero }}</td>
+      <td>{{ employee.nombre }}</td>
+      <td>{{ employee.rolID }}</td>
+      <td>{{ employee.sueldoBaseHora | currency}}</td>
+      <td>150</td>
+      <td class="buttons">
+        <button class="outline">Movimiento +</button>
+        <button class="outline">Reporte</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-switch-table',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./switch-table.component.scss']
 })
 export class SwitchTableComponent implements OnInit {
+
+  @Output() onSwitchTable = new EventEmitter<string>();
 
   selectedTable = 'employees'
 
@@ -16,6 +18,7 @@ export class SwitchTableComponent implements OnInit {
 
   switchTable(table: string) {
     this.selectedTable = table;
+    this.onSwitchTable.emit(table);
   }
 
 }
