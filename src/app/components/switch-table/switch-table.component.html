@@ -1,0 +1,5 @@
+<div class="switch">
+  <button [class.outline]="selectedTable !== 'employees'" (click)="switchTable('employees')">Empleados</button>
+  <button [class.outline]="selectedTable !== 'moves'" (click)="switchTable('moves')">Movimientos</button>
+  <button [class.outline]="selectedTable !== 'roles'" (click)="switchTable('roles')">Roles</button>
+</div>
